@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrada Equipamento Assistência</title>
+  <link rel="icon" href="favicon_leponto.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="form-container" id="formulario">
+<button id="theme-toggle" class="theme-toggle-button" aria-label="Alternar modo escuro">
+    <img src="darke-mode.png" alt="Modo Claro" class="icon sun-icon">
+    <img src="darke-mode.png" alt="Modo Escuro" class="icon moon-icon">
+</button>  <h1>Entrada de Equipamento</h1>
+
+  <div class="header">
+    <img id="logo-para-impressao" src="logo.png" alt="Leponto" style="display: none;">
+  </div>
+
+  <div class="form-section">
+    <label for="empresa">Empresa: <span class="required">*</span></label>
+    <input type="text" id="empresa" placeholder="Nome da Empresa" required>
+
+    <label for="cnpj">CNPJ/CPF:<span class="required">*</span></label>
+    <input type="text" id="cnpj" placeholder="Digite o CNPJ/CPF da empresa!">
+  </div>
+
+  <fieldset class="form-section">
+    <legend>Responsável pelo Equipamento</legend>
+    <label for="nome">Nome:<span class="required">*</span></label>
+    <input type="text" id="nome" placeholder="Nome completo de quem está deixando o equipamento!">
+
+    <label for="telefone">Telefone:<span class="required">*</span></label>
+    <input type="text" id="telefone" placeholder="(00) 00000-0000">
+  </fieldset>
+
+  <fieldset class="form-section">
+    <legend>Datas</legend>
+    <label for="data-entrada-form">Data de Entrada:</label>
+    <input type="date" id="data-entrada-form">
+
+    <label for="hora-entrada-form">Hora de Entrada:</label>
+    <input type="time" id="hora-entrada-form">
+  </fieldset>
+
+  <fieldset class="form-section">
+    <legend>Equipamentos</legend>
+    <div id="services-list-form">
+      <div class="row-form">
+        <div class="input-group">
+          <label>Equipamento: <span class="required">*</span></label>
+          <select id="equipamentos-list" required>
+            <option value=""> </option>
+            <option value="TOPDATA INNER REP PLUS">TOPDATA INNER REP PLUS</option>
+            <option value="TOPDATA PONTTO 5 CARTOGRÁFICO">TOPDATA PONTTO 5 CARTOGRÁFICO</option>
+            <option value="TOPDATA INNER PONTO 4">TOPDATA INNER PONTO 4</option>
+            <option value="TOPDATA LEITOR FACIAL F4">TOPDATA LEITOR FACIAL F4</option>
+            <option value="TOPDATA BASTÃO VIGGIA">TOPDATA BASTÃO VIGGIA</option>
+            <option value="CONTROL ID IDCLASS BIO PROX">CONTROL ID IDCLASS BIO PROX</option>
+            <option value="CONTROL ID IDCLASS PROX">CONTROL ID IDCLASS PROX</option>
+            <option value="CONTROL ID IDFACE">CONTROL ID IDFACE</option>
+            <option value="CONTROL ID IDFLEX">CONTROL ID IDFLEX</option>
+            <option value="HENRY PRISMA SF ADV">HENRY PRISMA SF ADV</option>
+            <option value="HENRY PRISMA SF ADV FACIAL">HENRY PRISMA SF ADV FACIAL</option>
+            <option value="HENRY HEXA ADV">HENRY HEXA ADV</option>
+            <option value="HENRY PONTO E ADV">HENRY PONTO E ADV</option>
+            <option value="HENRY PRIMME SF PONTO">HENRY PRIMME SF PONTO</option>
+            <option value="HENRY VIGIA BASTÃO BLUE">HENRY VIGIA BASTÃO BLUE</option>
+            <option value="HENRY VEGA CARTOGRÁFICO">HENRY VEGA CARTOGRÁFICO</option>
+            <option value="RWTECH BLUE">RWTECH BLUE</option>
+            <option value="EVO REP C">EVO REP C</option>
+            <option value="EVO 40 FACIAL">EVO 40 FACIAL</option>
+            <option value="EVO 50 FACIAL">EVO 50 FACIAL</option>
+            <option value="EVO FÁCIL CARTOGRÁFICO">EVO FÁCIL CARTOGRÁFICO</option>
+            <option value="HENRY PLUS CARTOGRÁFICO">HENRY PLUS CARTOGRÁFICO</option>
+            <option value="MADIS MD 0706">MADIS MD 0706</option>
+            <option value="MADIS MD EVO II">MADIS MD EVO II</option>
+            <option value="MADIS MD 5715">MADIS MD 5715</option>
+            <option value="MADIS MD EVO V2">MADIS MD EVO V2</option>
+            <option value="MADIS MD 405 CARTOGRÁFICO">MADIS MD 405 CARTOGRÁFICO</option>
+            <option value="Outro">Outro</option>
+
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Número de Série:</label>
+          <input type="text" class="serie-input" placeholder="Digite o número de série">
+        </div>
+        
+        <button type="button" class="add-button" onclick="addServiceRow()" title="Adicionar Equipamento">+</button>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-section">
+    <legend>Observações do recebimento</legend>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="fonte-form"> Fonte</label>
+      <label><input type="checkbox" id="bobina-form"> Bobina</label>
+      <label><input type="checkbox" id="chave-form"> Chave</label>
+      <label><input type="checkbox" id="tubete-form"> Tubete/Rolete Bobina</label>
+      <label><input type="checkbox" id="fita-form"> Fita Cartográfico</label>
+      <label><input type="checkbox" id="aparelho-form"> Só o Aparelho</label>
+      
+    </div>
+    <textarea id="observacoes-form" rows="4" placeholder="Observações, defeitos ou serviço a ser realizado..."></textarea>
+  </fieldset>
+
+  <div class="form-section operador-section">
+    <label for="operador">Selecione o operador(a): <span class="required">*</span></label>
+    <select id="operador" required>
+      <option value=""> </option>
+      <option value="LEONILDA ALKAMIN">LEONILDA ALKAMIN</option>
+      <option value="WESLEY OLIVEIRA">WESLEY OLIVEIRA</option>
+      <option value="FABIO JR">FABIO JR</option>
+    </select>
+  </div>
+
+  <p class="required-note">Os campos marcados com <span class="required">*</span> são obrigatórios.</p>
+
+  <button class="print-button" onclick="generatePrintPage()">🖨️ Imprimir</button>
+</div>
+
+<div class="print-preview" id="print-preview"></div>
+
+</body>
+</html>

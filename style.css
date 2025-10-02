@@ -1,0 +1,370 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #eef2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 850px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #938f8f;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input.equipamento-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #75bf4f;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+}
+
+.row-form {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.row-form .input-group {
+  flex-grow: 1;
+  min-width: 250px;
+}
+
+.remove-button {
+  background-color: #e74c3c;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  height: fit-content;
+  margin-top: 28px;
+  transition: background-color 0.2s ease;
+}
+.remove-button:hover {
+    background-color: #dc6a5e; /* cor mais clarinha ao passar o mouse */
+
+}
+
+.add-button {
+  background-color: #75bf4f;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 6px 9px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 27px;
+  transition: background-color 0.2s ease;
+}
+.add-button:hover {
+    background-color: #83c364; /* cor mais clarinha ao passar o mouse */
+
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.print-preview {
+  display: none;
+  background: white;
+  padding: 20px;
+}
+
+.required {
+  color: red;
+}
+
+.required-note {
+  font-size: 12px;
+  color: #555;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.print-button {
+    background-color: #3598dc;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 26px;
+    transition: background-color 0.2s ease;
+}
+
+.print-button:hover {
+    background-color: #5aaef0; /* cor mais clarinha ao passar o mouse */
+}
+
+
+/* Campo Operador à direita */
+.operador-section {
+  text-align: right;
+  max-width: 300px;
+  margin-left: auto;
+}
+.operador-section label {
+  font-size: 14px;
+  font-weight: 500;
+}
+#operador {
+  padding: 6px;
+  border-radius: 6px;
+  border: 2.5px solid #e74c3c;
+  font-size: 14px;
+  width: 100%;
+}
+
+@media print {
+  #logo-para-impressao {
+    display: block !important;
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px 0;
+  }
+
+  #formulario {
+    display: none;
+  }
+
+  .print-preview {
+    display: block;
+  }
+}
+/* --- DARK MODE --- */
+
+body.dark-mode {
+  background-color: #183153;
+  color: #e0e0e0;
+}
+
+.dark-mode .form-container {
+  background-color: #293f5f;
+  box-shadow: 0 8px 20px rgba(238 242 245);
+}
+
+.dark-mode .form-container h1,
+.dark-mode .form-container legend {
+  color: #e0e0e0;
+}
+
+.dark-mode label {
+  color: #e0e0e0;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="date"],
+.dark-mode input[type="time"],
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #293f5f;
+  border: 1px solid #ffffff;
+  color: #e0e0e0;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #888;
+}
+
+.dark-mode fieldset {
+  border-color: #ffffff;
+}
+
+.dark-mode .required-note {
+  color: #aaa;
+}
+
+.dark-mode .remove-button {
+  background-color: #9b2e2e;
+}
+
+.dark-mode .print-button {
+  background-color: #3598dc;
+}
+
+.dark-mode .add-button {
+  background-color: #558b35;
+}
+
+.dark-mode .operador-section #operador {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2.5px solid #9b2e2e;
+}
+
+.theme-toggle-button {
+  background-color: #f0f0f0; /* Fundo claro */
+  /*border: 1px solid #ccc;/*   /* Borda sutil */
+  /*border-radius: 50%;/*      /* Torna o botão circular */
+  width: 40px;             /* Largura */
+  height: 40px;            /* Altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  transition: background-color 0.6s ease, transform 0.6s ease, border-color 0.6s ease; /* Transições suaves */
+  font-size: 20px;         /* Tamanho do ícone */
+  color: #333;             /* Cor do ícone (sol) */
+}
+
+.theme-toggle-button:hover {
+  transform: scale(1.1);
+  /*border-color: #007bff; /* Cor da borda ao passar o mouse */
+}
+
+/* Estilos para o modo escuro */
+.dark-mode .theme-toggle-button {
+  /*background-color: #ffffff00; /* Fundo escuro */
+  color: #e0e0e0;           /* Cor do ícone (lua) */
+}
+
+/* --- ESTILO DO BOTÃO DO TEMA --- */
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  /*border: 1px solid #007bff;*/
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  padding: 0; /* Remove o padding do botão para o ícone ficar no canto */
+  display: flex; /* Alinha o conteúdo (os ícones) */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Largura para o botão de toggle */
+  height: 40px; /* Altura para o botão de toggle */
+}
+
+/* Esconde o ícone do sol e mostra o da lua quando o modo escuro está ativo */
+.theme-toggle-button .icon {
+  width: 25px; /* Tamanho dos ícones */
+  height: 25px;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle-button .moon-icon {
+  display: none;
+}
+
+.dark-mode .theme-toggle-button .sun-icon {
+  display: none;
+}
+
+.dark-mode .theme-toggle-button .moon-icon {
+  display: block; /* Use 'block' para o ícone da lua */
+}
+/* --- REGRA PARA IMPRESSÃO --- */
+/* Garante que o modo escuro não afete a impressão */
+@media print {
+  body,
+  .form-container,
+  input,
+  textarea,
+  select {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact; /* Força a impressão das cores de fundo */
+    print-color-adjust: exact;
+  }
+
+  .dark-mode .form-container,
+  .dark-mode input,
+  .dark-mode textarea,
+  .dark-mode select {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .dark-mode .form-container h1,
+  .dark-mode .form-container legend,
+  .dark-mode label {
+    color: black !important;
+  }
+
+  .dark-mode fieldset {
+    border-color: #ffffff !important;
+  }
+
+  .dark-mode .remove-button,
+  .dark-mode .print-button,
+  .dark-mode .add-button,
+  .dark-mode .operador-section #operador {
+    background-color: initial !important;
+    color: initial !important;
+    border-color: initial !important;
+  }
+}
