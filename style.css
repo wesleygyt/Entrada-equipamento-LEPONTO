@@ -94,7 +94,7 @@ legend {
   transition: background-color 0.2s ease;
 }
 .remove-button:hover {
-    background-color: #dc6a5e; /* cor mais clarinha ao passar o mouse */
+    background-color: #dc6a5e;
 
 }
 
@@ -111,7 +111,7 @@ legend {
   transition: background-color 0.2s ease;
 }
 .add-button:hover {
-    background-color: #83c364; /* cor mais clarinha ao passar o mouse */
+    background-color: #83c364;
 
 }
 
@@ -160,7 +160,7 @@ textarea {
 }
 
 .print-button:hover {
-    background-color: #5aaef0; /* cor mais clarinha ao passar o mouse */
+    background-color: #5aaef0;
 }
 
 
@@ -198,7 +198,6 @@ textarea {
     display: block;
   }
 }
-/* --- DARK MODE --- */
 
 body.dark-mode {
   background-color: #183153;
@@ -261,11 +260,11 @@ body.dark-mode {
 }
 
 .theme-toggle-button {
-  background-color: #f0f0f0; /* Fundo claro */
-  /*border: 1px solid #ccc;/*   /* Borda sutil */
-  /*border-radius: 50%;/*      /* Torna o botão circular */
-  width: 40px;             /* Largura */
-  height: 40px;            /* Altura */
+  background-color: #f0f0f0;
+  /*border: 1px solid #ccc;/*
+  /*border-radius: 50%;/*
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,9 +273,9 @@ body.dark-mode {
   top: 15px;
   right: 15px;
   z-index: 10;
-  transition: background-color 0.6s ease, transform 0.6s ease, border-color 0.6s ease; /* Transições suaves */
-  font-size: 20px;         /* Tamanho do ícone */
-  color: #333;             /* Cor do ícone (sol) */
+  transition: background-color 0.6s ease, transform 0.6s ease, border-color 0.6s ease;
+  font-size: 20px;
+  color: #333;
 }
 
 .theme-toggle-button:hover {
