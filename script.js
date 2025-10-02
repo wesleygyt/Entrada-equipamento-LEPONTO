@@ -1,8 +1,6 @@
-// No início do seu script.js, adicione a lógica para o dark mode
+// início do dark mode
 document.addEventListener('DOMContentLoaded', () => {
-    // ... O código já existente ...
 
-    // Lógica do Dark Mode
     const themeToggleBtn = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
 
@@ -22,7 +20,6 @@ function addServiceRow() {
     const servicesList = document.getElementById('services-list-form');
     const newRow = document.createElement('div');
     newRow.classList.add('row-form');
-    // Adiciona a classe 'equipamentos-list' e os valores nas opções
     newRow.innerHTML = `
       <div class="input-group">
           <label>Equipamento:</label>
@@ -118,7 +115,7 @@ function generatePrintPage() {
         return;
     }
 
-    // Coleta os dados dos equipamentos de forma correta
+    // Coleta os dados dos equipamentos
     const equipamentosColetados = [];
     const servicosRows = document.querySelectorAll('#services-list-form .row-form');
     servicosRows.forEach(row => {
@@ -152,7 +149,6 @@ function generatePrintPage() {
     // Monta o HTML completo da página de impressão
     printDiv.innerHTML = `
         <style>
-            /* Copie e cole todo o CSS do formulario.html aqui para garantir o estilo na impressão */
             body {
                 font-family: 'Arial', sans-serif;
                 font-size: 10px;
@@ -162,7 +158,7 @@ function generatePrintPage() {
                 background-color: #f0f0f0;
             }
             .container {
-                width: 794px; /* Largura de uma folha A4 em 96 DPI */
+                width: 794px; /* Largura de uma folha A4*/
                 margin: 0 auto;
                 border: 1px solid #000;
                 padding: 20px;
@@ -289,7 +285,7 @@ function generatePrintPage() {
                 padding-top: 5px;
                 font-size: 10px;
             }
-            /* assinatura: operador acima da linha; LEPONTO abaixo da linha */
+            /* assinatura: operador acima da linha*/
             .footer-left .operador-name {
                 margin-bottom: -2px;
                 font-weight: bold;
@@ -423,21 +419,19 @@ function generatePrintPage() {
         fillCurrentDateTime();
     });
 }
-// Função para converter o texto de um campo para caixa alta
+// Função converter o texto para caixa alta
 function convertToUpperCase(element) {
     element.addEventListener('input', () => {
         element.value = element.value.toUpperCase();
     });
 }
 
-// Aplica a função a todos os campos de texto relevantes ao carregar a página
 function setupUpperCaseInputs() {
     const textInputs = document.querySelectorAll('input[type="text"], textarea');
     textInputs.forEach(input => {
         convertToUpperCase(input);
     });
 }
-// Função para formatar a data de YYYY-MM-DD para DD/MM/YYYY
 function formatarData(dataISO) {
     if (!dataISO) return '';
     const partes = dataISO.split('-'); // [2025, 09, 14]
